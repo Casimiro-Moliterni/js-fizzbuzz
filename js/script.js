@@ -18,18 +18,33 @@
 
 //  in console i numeri da 1 a 100
 // tutti inumeri da 1 a 100 
-for(let i = 1; i <= 100; i++){
+const numbContainer = document.querySelector('#container');
+ for(let i = 1; i <= 100; i++){
     // stabilire se i numeri sono multipli di 3 o di 5 o entrambe
-  let numberBase = i % 3 === 0 && i % 5 === 0 ;
-  numberBase = '"FizzBuzz"';
-  if(i % 5 === 0 ){
-    numberBase = '"Buzz"';
-  }else if ( i % 3 === 0){
-    numberBase = '"Fizz"';
-  } else{
-
+  let numberBase;
+  if(i % 5 === 0 && i % 3 === 0){
+    numberBase = 'FizzBuzz';
+  }else if ( i % 5 === 0){
+    numberBase = 'Buzz';
+  } else if (i % 3 === 0){
+    numberBase = 'Fizz';
+  } else {
+    numberBase = i ;
   }
-  console.log(i + '-' + numberBase)
+  console.log( numberBase)
+  if(i % 5 === 0 && i % 3 === 0){
+    const newBox = `<div class="box fizzbuzz">${numberBase}</div>`;
+    numbContainer.innerHTML += newBox;
+  }else if ( i % 5 === 0){
+    const newBox = `<div class="box buzz">${numberBase}</div>`;
+    numbContainer.innerHTML += newBox;
+  } else if (i % 3 === 0){
+    const newBox = `<div class="box fizz">${numberBase}</div>`;
+    numbContainer.innerHTML += newBox;
+  } else {
+    const newBox = `<div class="box">${numberBase}</div>`;
+    numbContainer.innerHTML += newBox;
+  }
 }
 
 //  i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi “Buzz,
