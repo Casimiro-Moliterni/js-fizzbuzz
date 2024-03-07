@@ -19,19 +19,17 @@
 //  in console i numeri da 1 a 100
 // tutti inumeri da 1 a 100 
 for(let i = 1; i <= 100; i++){
-    console.log(i)
     // stabilire se i numeri sono multipli di 3 o di 5 o entrambe
-    i = i % 3 === 0 ;
-    let numberBase = 'Fizz';
-   if( i % 3 === 0 && i % 5 === 0){
-    numberBase = '"FizzBuzz"'
-   }else if (i % 5 === 0){
-    numberBase = '"Buzz"'
-   } else {
-  
-   }
+  let numberBase = i % 3 === 0 && i % 5 === 0 ;
+  numberBase = '"FizzBuzz"';
+  if(i % 5 === 0 ){
+    numberBase = '"Buzz"';
+  }else if ( i % 3 === 0){
+    numberBase = '"Fizz"';
+  } else{
 
-  console.log(numberBase)
+  }
+  console.log(i + '-' + numberBase)
 }
 
 //  i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi “Buzz,
