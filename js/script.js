@@ -21,13 +21,14 @@
 for(let i = 1; i <= 100; i++){
     console.log(i)
     // stabilire se i numeri sono multipli di 3 o di 5 o entrambe
-    let numberBase;
+    i = i % 3 === 0 ;
+    let numberBase = 'Fizz';
    if( i % 3 === 0 && i % 5 === 0){
     numberBase = '"FizzBuzz"'
    }else if (i % 5 === 0){
     numberBase = '"Buzz"'
    } else {
-   
+  
    }
 
   console.log(numberBase)
