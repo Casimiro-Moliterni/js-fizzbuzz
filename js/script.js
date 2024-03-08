@@ -24,27 +24,22 @@ const numbContainer = document.querySelector('#container');
   let numberBase;
   if(i % 5 === 0 && i % 3 === 0){
     numberBase = 'FizzBuzz';
-  }else if ( i % 5 === 0){
-    numberBase = 'Buzz';
-  } else if (i % 3 === 0){
-    numberBase = 'Fizz';
-  } else {
-    numberBase = i ;
-  }
-  console.log( numberBase)
-  if(i % 5 === 0 && i % 3 === 0){
     const newBox = `<div class="box fizzbuzz">${numberBase}</div>`;
     numbContainer.innerHTML += newBox;
   }else if ( i % 5 === 0){
+    numberBase = 'Buzz';
     const newBox = `<div class="box buzz">${numberBase}</div>`;
     numbContainer.innerHTML += newBox;
   } else if (i % 3 === 0){
+    numberBase = 'Fizz';
     const newBox = `<div class="box fizz">${numberBase}</div>`;
     numbContainer.innerHTML += newBox;
   } else {
+    numberBase = i ;
     const newBox = `<div class="box">${numberBase}</div>`;
     numbContainer.innerHTML += newBox;
   }
+  console.log( numberBase)
 }
 
 //  i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi “Buzz,
